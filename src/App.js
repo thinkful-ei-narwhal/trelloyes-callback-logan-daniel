@@ -15,11 +15,11 @@ function App(props) {
   
 
   return (
-    <main class="App">
-    <header class="App-header">
+    <main className="App">
+    <header className="App-header">
       <h1>Trelloyes!</h1>
     </header>
-    <div class="App-list">
+    <div className="App-list">
     {newList}
     </div>
   </main>
