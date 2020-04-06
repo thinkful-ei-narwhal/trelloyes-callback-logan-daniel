@@ -3,12 +3,14 @@ import './App.css';
 import List from './List.js';
 import STORE from './store';
 
+function App(props) {
 
-function App(STORE) {
-  
-  const cards = STORE.allCards;
+  const newList = STORE.lists.map(function(ob) {
 
-  const newList = STORE.lists.map(ob => <List key={ob.id} header={ob.header} cards={cards}/>)
+    const cards = ob.cardIds.map(el => STORE.allCards[el])
+
+    return <List key={ob.id} header={ob.header} cards={cards}/>;
+  });
   
   
 
